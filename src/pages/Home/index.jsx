@@ -1,15 +1,20 @@
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
+import { connect, useDispatch } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 import { FormattedMessage } from 'react-intl';
 
 import { ping } from '@containers/App/actions';
+import { selectInfoLoginUser } from '@pages/Login/selectors';
 
-const Home = () => {
+const Home = ({ login }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(ping());
   }, [dispatch]);
+
+  console.log(login);
 
   return (
     <div>
@@ -18,4 +23,12 @@ const Home = () => {
   );
 };
 
-export default Home;
+Home.propTypes = {
+  login: PropTypes.object,
+};
+
+const mapStateToProps = createStructuredSelector({
+  login: selectInfoLoginUser,
+});
+
+export default connect(mapStateToProps)(Home);

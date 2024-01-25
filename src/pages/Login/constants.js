@@ -1,0 +1,3 @@
+export const SET_USER_LOGIN = 'SET_USER_LOGIN';
+export const GET_USER_LOGIN = 'GET_USER_LOGIN';
+export const SET_INFO_LOGIN_USER = 'SET_INFO_LOGIN_USER';
