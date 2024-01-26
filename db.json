@@ -47,6 +47,12 @@
       "fullname": "sdfsfsdfs",
       "email": "dsfds",
       "password": "sdfdsfsfsfs"
+    },
+    {
+      "id": "860c",
+      "fullname": "faras test",
+      "email": "farastest@gmail.com",
+      "password": "123456"
     }
   ],
   "post": [
@@ -65,15 +71,6 @@
       "content": "<p>dwadwadwawda</p>",
       "pure_text": "dwadwadwawda",
       "created_date": "2024-01-26 03:03:46"
-    },
-    {
-      "id": "b3d4"
-    },
-    {
-      "id": "6f4a"
-    },
-    {
-      "id": "1d37"
     },
     {
       "id": "8436",

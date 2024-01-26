@@ -46,7 +46,7 @@
         gap: 15px;
 
         .buttonLogin {
-          color: #FFF;
+          color: var(--color-text);
           font-size: 14px;
           font-weight: 700;
           width: 100px;
@@ -58,7 +58,7 @@
         }
 
         .buttonRegister {
-          color: #FFF;
+          color: var(--color-text);
           background-color: var(--color-bg-secondary);
           font-size: 14px;
           font-weight: 700;

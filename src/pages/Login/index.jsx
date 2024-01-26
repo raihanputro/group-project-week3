@@ -74,13 +74,13 @@ const Login = ({ dataUser }) => {
                             <FormLabel className={classes.label}>
                               <FormattedMessage id="app_login_label_email" />
                             </FormLabel>
-                            <TextField sx={{ input: { color: 'black' } }} className={classes.input} variant="outlined" type='text' value={email} onChange={(e) => setEmail(e.target.value)} required={true}/>
+                            <TextField sx={{ input: { color: 'black' } }} className={classes.input} variant="outlined" type='email' value={email} onChange={(e) => setEmail(e.target.value)} required={true}/>
                         </Box>
                         <Box className={classes.inputLabelContainer}>
                             <FormLabel className={classes.label}>
                               <FormattedMessage id="app_login_label_password" />
                             </FormLabel>
-                            <TextField sx={{ input: { color: 'black' } }} className={classes.input} variant="outlined" type='text' value={password} onChange={(e) => setPassword(e.target.value)} required={true}/>
+                            <TextField sx={{ input: { color: 'black' } }} className={classes.input} variant="outlined" type='password' value={password} onChange={(e) => setPassword(e.target.value)} required={true}/>
                         </Box>
                     </FormControl>
                     <Button className={classes.loginButton} onClick={onSubmit}><FormattedMessage id="app_login_title" /></Button>
