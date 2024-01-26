@@ -1,22 +1,18 @@
 import { produce } from "immer";
 
-import { SET_USER_DATA_LOGIN, SET_INFO_LOGIN_USER } from "./constants";
+import { SET_USER_DATA_LOGIN } from "./constants";
 
 export const initialState = {
     dataUser: [],
-    infoLoginUser: null
 };
 
-export const storedKey = ['infoLoginUser'];
+export const storedKey = [''];
 
 const loginReducer = ( state = initialState, action ) => 
     produce(state, (draft) => {
         switch(action.type) {
             case SET_USER_DATA_LOGIN:
                 draft.dataUser = action.data;
-                break;
-            case SET_INFO_LOGIN_USER:
-                draft.infoLoginUser = action.infoData;
                 break;
         }
     });

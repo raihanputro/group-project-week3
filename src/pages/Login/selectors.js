@@ -4,4 +4,3 @@ import { initialState } from "./reducer";
 const selectLoginState = (state) => state.login || initialState;
 
 export const selectUserLogin = createSelector(selectLoginState, (state) => state.dataUser);
-export const selectInfoLoginUser = createSelector(selectLoginState, (state) => state.infoLoginUser);

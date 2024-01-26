@@ -7,8 +7,8 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import { Button, Box, Card, CardContent, Typography, TextField, FormControl, FormLabel } from '@mui/material';
 
 import { selectUserLogin } from './selectors';
-import { getUserDataLogin, setInfoLoginUser } from './actions';
-import { showPopup } from '@containers/App/actions';
+import { getUserDataLogin } from './actions';
+import { doLogin, showPopup } from '@containers/App/actions';
 
 import classes from './style.module.scss';
 
@@ -48,7 +48,7 @@ const Login = ({ dataUser }) => {
         } else if (matchingAccount[0].password !== password) {
           dispatch(showPopup(intl.formatMessage({ id: 'login_validation'}), intl.formatMessage({ id: 'login_validation_password_not_match'})));
         } else if (matchingAccount[0].email === email && matchingAccount[0].password === password) {
-          dispatch(setInfoLoginUser({ id: matchingAccount[0].id, fullname: matchingAccount[0].fullname, email: matchingAccount[0].email}));
+          dispatch(doLogin({ id: matchingAccount[0].id, fullname: matchingAccount[0].fullname, email: matchingAccount[0].email}));
           navigate('/');
         }
      };
