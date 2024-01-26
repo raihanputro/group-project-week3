@@ -1,8 +1,8 @@
 import { takeLatest, call, put } from 'redux-saga/effects';
 
 import { showPopup, setLoading } from '@containers/App/actions';
-import { GET_USER_POSTS, INSERT_NEW_POST } from './constants';
-import { createNewPost, getMyPostApi } from '@domain/api';
+import { EDIT_POST_DATA, GET_USER_POSTS, INSERT_NEW_POST } from './constants';
+import { createNewPost, editPostDataApi, getMyPostApi } from '@domain/api';
 import { setUserPost } from './actions';
 
 function* doInsertPost({formData, cb}) {
@@ -29,8 +29,21 @@ function* getMyPost({userId}) {
 
   yield put(setLoading(false));
 }
+function* editPost({id, data, cb}) {
+  yield put(setLoading(true));
+
+  try {
+    yield call(editPostDataApi, id, data);
+    cb();
+  } catch (error) {
+    yield put(showPopup());
+  }
+
+  yield put(setLoading(false));
+}
 
 export default function* createNewSaga() {
   yield takeLatest(INSERT_NEW_POST, doInsertPost);
   yield takeLatest(GET_USER_POSTS, getMyPost);
+  yield takeLatest(EDIT_POST_DATA, editPost);
 }
