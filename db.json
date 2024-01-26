@@ -5,6 +5,12 @@
       "fullname": "",
       "email": "",
       "password": ""
+    },
+    {
+      "id": "8237",
+      "fullname": "si tong",
+      "email": "tes1@mail.com",
+      "password": "aaa123"
     }
   ],
   "post": [
