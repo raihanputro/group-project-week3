@@ -2,8 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include apply-at-xs-size {
+        margin-top: 15%;
+    }
     @include apply-at-xs2-size {
-        margin-top:30%;
+        margin-top:20%;
     }
     @include apply-at-lg-size {
         margin-top: 20%;
@@ -20,6 +23,9 @@
         max-width: 416px;
         max-height: 596px;
         box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        @include apply-at-xs-size {
+            width: 80%;
+        }
         @include apply-at-xs2-size {
             width: 80%;
         }
