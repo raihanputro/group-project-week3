@@ -16,8 +16,6 @@ const Home = ({ login, posts }) => {
     dispatch(getPost());
   }, [dispatch]);
 
-  console.log(posts);
-
   return (
     <Box className={classes.container} padding={{ xs: '10px 15vw', sm: '10px 20vw', md: '10px 25vw' }}>
       <FormattedMessage id="app_home" />

@@ -6,11 +6,14 @@ import request from '@utils/request';
 const urls = {
   ping: 'ping.json',
   getAllPost: 'post',
+  user: 'user',
+  post: 'post',
+  comment: 'comment',
 };
 
 export const callAPI = async (endpoint, method, header = {}, params = {}, data = {}) => {
   const defaultHeader = {
-    'Content-Type': 'application/json; charset=UTF-8',
+    'Content-Type': 'x-www-form-urlencoded; charset=UTF-8',
   };
 
   const headers = merge(defaultHeader, header);
@@ -30,3 +33,13 @@ export const callAPI = async (endpoint, method, header = {}, params = {}, data =
 
 export const ping = () => callAPI(urls.ping, 'get');
 export const getAllPost = () => callAPI(urls.getAllPost, 'get');
+
+export const RegisterUser = (datauser) => callAPI(urls.user, 'POST', {}, {}, datauser);
+
+export const LoginUser = () => callAPI(urls.user, 'GET');
+
+export const createNewPost = (formData) => callAPI(urls.post, 'POST', {}, {}, formData);
+export const getMyPostApi = (userId) => callAPI(urls.post, 'GET', {}, { user_id: userId });
+export const deletePostApi = (id) => callAPI(`${urls.post}/${id}`, 'DELETE');
+export const getPostDetailApi = (id) => callAPI(`${urls.post}/${id}`, 'GET');
+export const getPostCommentsApi = (postid) => callAPI(urls.comment, 'GET', {}, { post_id: postid });
