@@ -38,6 +38,33 @@
         margin-right: 0.5rem;
         cursor: pointer;
       }
+      .buttonContainer {
+        @include directionX;
+        gap: 15px;
+
+        .buttonLogin {
+          color: #FFF;
+          font-size: 14px;
+          font-weight: 700;
+          width: 100px;
+          height: 30px;
+          flex-shrink: 0;
+          background-color: transparent;
+          border: 1px solid #FFF;
+          border-radius: 5px;
+        }
+
+        .buttonRegister {
+          color: #FFF;
+          background-color: var(--color-bg-secondary);
+          font-size: 14px;
+          font-weight: 700;
+          width: 100px;
+          height: 30px;
+          flex-shrink: 0;
+          border-radius: 5px;
+        }
+      }
       .toggle {
         @include directionX;
         align-items: center;
