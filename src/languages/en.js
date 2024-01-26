@@ -39,4 +39,5 @@ export default {
   detail_post_commnet_field: "Your comment here...",
   detail_post_comment_button: "Send",
   detail_post_empty: "Empty...",
+  detail_post_comment_error: "Comment must be more than 5 characters!",
 };

@@ -15,6 +15,7 @@ import classes from "./style.module.scss";
 import { getPostDetailData, insertComment } from "./actions";
 import { selectPostComments, selectPostDetail } from "./selectors";
 import PostCard from "@components/PostCard";
+import { showPopup } from "@containers/App/actions";
 
 function DetailPost({ postDataSelect, commentsSelect, isLogined, userData }) {
     const { postid } = useParams();
@@ -27,6 +28,10 @@ function DetailPost({ postDataSelect, commentsSelect, isLogined, userData }) {
     const [comment, setComment] = useState("");
 
     function sendComment() {
+        if(comment.length < 5) {
+            dispatch(showPopup(intl.formatMessage({id: "detail_post_title"}), intl.formatMessage({id: "detail_post_comment_error"})));
+            return;
+        }
         const dateNow = new Date().toISOString().slice(0, 19).replace("T", " ");
         const constructData = {
             post_id: postid,

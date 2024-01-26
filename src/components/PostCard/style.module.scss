@@ -14,15 +14,21 @@
             color: var(--color-text);
         }
     }
-    .content {
-        width: 100%;
-        font-size: 16px;
-        margin-bottom: 20px;
-        color: var(--color-text);
+    .cardBody {
+
+        .content {
+            width: 100%;
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: var(--color-text);
+        }
+        .date {
+            width: 100%;
+            text-align: end;
+            color: var(--color-text-darker);
+        }
     }
-    .date {
-        width: 100%;
-        text-align: end;
-        color: var(--color-text-darker);
+    .cardPounter {
+        cursor: pointer;
     }
 }

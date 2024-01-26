@@ -44,7 +44,9 @@ function PostCard({ data, isShowDeleteBtn = false, onDelete, isComment = false, 
     }
 
     function goToPostDetail() {
-        navigate(`/${data?.id}`);
+        if(!isComment) {
+            navigate(`/${data?.id}`);
+        }
     }
 
     useEffect(() => {
@@ -71,7 +73,7 @@ function PostCard({ data, isShowDeleteBtn = false, onDelete, isComment = false, 
                         <DeleteIcon />
                     </IconButton>}
                 </div>
-                <div className={classes.cardBody} onClick={goToPostDetail}>
+                <div className={`${classes.cardBody} ${isComment ? "" : classes.cardPounter}`} onClick={goToPostDetail}>
                     <Typography variant="body1" className={classes.content}>{isComment ? data?.content : data?.pure_text}</Typography>
                     <Typography variant="body2" className={classes.date}>{convertDate(data?.created_date, intl.formatMessage({ id: "app_date_locale" }))}</Typography>
                 </div>

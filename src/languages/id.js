@@ -39,4 +39,5 @@ export default {
   detail_post_commnet_field: "Komen Anda di sini...",
   detail_post_comment_button: "Kirim",
   detail_post_empty: "Kosong...",
+  detail_post_comment_error: "Komen harus lebih dari 5 karakter!",
 };
