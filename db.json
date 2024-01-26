@@ -11,56 +11,85 @@
       "fullname": "Raihan Putro Maulana Rizky",
       "email": "raihanworks461@gmail.com",
       "password": "RaihanPutro123"
+    },
+    {
+      "id": "badb",
+      "fullname": "test1",
+      "email": "test1@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "1c5b",
+      "fullname": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "715b",
+      "fullname": "test 2",
+      "email": "test2@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "b0cd",
+      "fullname": "dddd",
+      "email": "ddd",
+      "password": "3"
+    },
+    {
+      "id": "0a9e",
+      "fullname": "rehan123456",
+      "email": "sggrrgr",
+      "password": "1221e1fwfwfw"
+    },
+    {
+      "id": "bb74",
+      "fullname": "sdfsfsdfs",
+      "email": "dsfds",
+      "password": "sdfdsfsfsfs"
     }
   ],
   "post": [
     {
-      "id": "9bcf",
-      "user_id": "5b46",
-      "fullname": "Ini orang aja",
-      "content": "<p>sadwasdw adawd</p><p>aw d</p><p> aw</p><p>da</p><p>w</p><p>aw</p><p>daw</p><p>d</p><p>wa</p><p>daw</p>",
-      "pure_text": "sadwasdw adawd\naw d\n aw\nda\nw\naw\ndaw\nd\nwa\ndaw",
-      "created_date": "2024-01-25T09:59:47.010Z"
-    },
-    {
-      "id": "e706",
+      "id": "0540",
       "user_id": 1,
       "fullname": "Ini orang aja",
-      "content": "<p>awdwadawdwad</p>",
-      "pure_text": "awdwadawdwad",
-      "created_date": "2024-01-25T09:59:49.563Z"
+      "content": "<p>wdadwadwadw</p><p><br></p><h1>ini data</h1>",
+      "pure_text": "wdadwadwadw\n\nini data",
+      "created_date": "2024-01-26 07:32:27"
     },
     {
-      "id": "dc4f",
+      "id": "a775",
       "user_id": 1,
       "fullname": "Ini orang aja",
-      "content": "<p>wdwadw ada wadaw daw dwa</p>",
-      "pure_text": "wdwadw ada wadaw daw dwa",
-      "created_date": "2024-01-25T09:59:52.367Z"
+      "content": "<p>dwadwadwawda</p>",
+      "pure_text": "dwadwadwawda",
+      "created_date": "2024-01-26 03:03:46"
     },
     {
-      "id": "04e8",
-      "user_id": 1,
-      "fullname": "Ini orang aja",
-      "content": "<p>awd wadwad aw aw d</p>",
-      "pure_text": "awd wadwad aw aw d",
-      "created_date": "2024-01-25T09:59:54.487Z"
+      "id": "b3d4"
     },
     {
-      "id": "8149",
-      "user_id": 1,
-      "fullname": "Ini orang aja",
-      "content": "<p> d wad wad wad wa</p>",
-      "pure_text": " d wad wad wad wa",
-      "created_date": "2024-01-25T09:59:57.287Z"
+      "id": "6f4a"
     },
     {
-      "id": "9e23",
-      "user_id": 1,
-      "fullname": "Ini orang aja",
-      "content": "<p>w dwadawd wad aw</p>",
-      "pure_text": "w dwadawd wad aw",
-      "created_date": "2024-01-25T09:59:59.605Z"
+      "id": "1d37"
+    },
+    {
+      "id": "8436",
+      "user_id": "2c74",
+      "fullname": "awdadwad",
+      "content": "<p>mau post ni</p>",
+      "pure_text": "mau post ni",
+      "created_date": "2024-01-26 07:46:27"
+    },
+    {
+      "id": "307c",
+      "user_id": "9565",
+      "fullname": "test user",
+      "content": "<p>bikin baru</p><p><br></p><h1>ini di edit yaaa</h1><p><br></p><p><strong>adwadwdadawdwa</strong>dawda<em>wdaw</em>dw<u>aw</u><strong><u>aw</u></strong></p>",
+      "pure_text": "bikin baru\n\nini di edit yaaa\n\nadwadwdadawdwadawdawdawdwawaw",
+      "created_date": "2024-01-26 07:59:09"
     }
   ],
   "comment": [
@@ -69,6 +98,30 @@
       "post_id": 1,
       "user_id": 1,
       "content": ""
+    },
+    {
+      "id": "accc",
+      "post_id": "0540",
+      "user_id": 1,
+      "fullname": "ini org komen",
+      "content": "dwadwadwa",
+      "created_date": "2024-01-26 05:46:05"
+    },
+    {
+      "id": "d1bb",
+      "post_id": "8436",
+      "user_id": "2c74",
+      "fullname": "awdadwad",
+      "content": "mau komen",
+      "created_date": "2024-01-26 07:55:15"
+    },
+    {
+      "id": "69b8",
+      "post_id": "307c",
+      "user_id": "9565",
+      "fullname": "test user",
+      "content": "komen aja",
+      "created_date": "2024-01-26 07:58:47"
     }
   ]
 }

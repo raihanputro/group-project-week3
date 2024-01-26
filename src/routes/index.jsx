@@ -51,6 +51,13 @@ const routes = [
     component: Profile,
     layout: MainLayout,
   },
+  {
+    path: '/edit/:postid',
+    name: 'Edit Post',
+    protected: true,
+    component: CreatePost,
+    layout: MainLayout,
+  },
   { path: '/notfound', name: 'Not Found', component: NotFound, layout: MainLayout, protected: false },
 ];
 

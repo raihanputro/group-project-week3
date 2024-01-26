@@ -43,3 +43,6 @@ export const getMyPostApi = (userId) => callAPI(urls.post, 'GET', {}, { user_id:
 export const deletePostApi = (id) => callAPI(`${urls.post}/${id}`, 'DELETE');
 export const getPostDetailApi = (id) => callAPI(`${urls.post}/${id}`, 'GET');
 export const getPostCommentsApi = (postid) => callAPI(urls.comment, 'GET', {}, { post_id: postid });
+export const insertCommentApi = (data) => callAPI(urls.comment, 'POST', {}, {}, data);
+export const deleteCommentApi = (id) => callAPI(`${urls.comment}/${id}`, 'DELETE');
+export const editPostDataApi = (id, data) => callAPI(`${urls.post}/${id}`, 'PATCH', {}, {}, data);
