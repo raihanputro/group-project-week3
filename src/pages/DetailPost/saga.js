@@ -11,6 +11,7 @@ function* doGetPostDetailData({id, cbNotFound, cb}) {
   try {
     const resPostDetail = yield call(getPostDetailApi, id);
     const resCommnets = yield call(getPostCommentsApi, id);
+    resCommnets.sort((a, b) => new Date(b.created_date) - new Date(a.created_date));
     const data = {
       postDetailData: resPostDetail,
       comments: resCommnets
@@ -37,6 +38,7 @@ function* doInsertComment({postid, comment, cb}) {
   try {
     yield call(insertCommentApi, comment);
     const res = yield call(getPostCommentsApi, postid);
+    res.sort((a, b) => new Date(b.created_date) - new Date(a.created_date));
     // yield put(setPostComments(res));
     cb(res);
   } catch (error) {
