@@ -9,14 +9,14 @@ import { createStructuredSelector } from "reselect";
 
 import { convertDate } from "@utils/allUtils";
 import FillMessage from "@components/FillMessage";
-import { selectLogin } from "@containers/Client/selectors";
+import { selectInfoLoginUser, selectLogin } from "@containers/Client/selectors";
 
 import classes from "./style.module.scss";
 import { getPostDetailData, insertComment } from "./actions";
 import { selectPostComments, selectPostDetail } from "./selectors";
 import PostCard from "@components/PostCard";
 
-function DetailPost({ postDataSelect, commentsSelect, isLogined }) {
+function DetailPost({ postDataSelect, commentsSelect, isLogined, userData }) {
     const { postid } = useParams();
     const dispatch = useDispatch();
     const intl = useIntl();
@@ -30,8 +30,8 @@ function DetailPost({ postDataSelect, commentsSelect, isLogined }) {
         const dateNow = new Date().toISOString().slice(0, 19).replace("T", " ");
         const constructData = {
             post_id: postid,
-            user_id: 1,
-            fullname: "ini org komen",
+            user_id: userData?.id,
+            fullname: userData?.fullname,
             content: comment,
             created_date: dateNow
         }
@@ -89,13 +89,15 @@ function DetailPost({ postDataSelect, commentsSelect, isLogined }) {
 DetailPost.propTypes = {
     postDataSelect: PropTypes.object,
     commentsSelect: PropTypes.array,
-    isLogined: PropTypes.bool
+    isLogined: PropTypes.bool,
+    userData: PropTypes.object
 }
 
 const mapStateToProps = createStructuredSelector({
     isLogined: selectLogin,
     postDataSelect: selectPostDetail,
-    commentsSelect: selectPostComments
+    commentsSelect: selectPostComments,
+    userData: selectInfoLoginUser
 });
 
 export default connect(mapStateToProps)(DetailPost);

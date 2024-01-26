@@ -6,6 +6,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { useIntl } from "react-intl";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
+import EditIcon from '@mui/icons-material/Edit';
 
 import { convertDate } from "@utils/allUtils";
 import { useDispatch, connect } from "react-redux";
@@ -13,7 +14,7 @@ import { deletePost } from "@containers/App/actions";
 
 import classes from "./style.module.scss";
 import { createStructuredSelector } from "reselect";
-import { selectUserData } from "@containers/Client/selectors";
+import { selectInfoLoginUser, selectUserData } from "@containers/Client/selectors";
 import { useEffect, useState } from "react";
 import { deleteComment } from "@pages/DetailPost/actions";
 
@@ -51,6 +52,11 @@ function PostCard({ data, isShowDeleteBtn = false, onDelete, isComment = false, 
             setIsUserLogined(true);
             setIsMyData(data?.user_id === userData?.id);
         }
+
+        return () => {
+            setIsUserLogined(false);
+            setIsMyData(false);
+        }
     }, [userData]);
 
     return (
@@ -58,6 +64,9 @@ function PostCard({ data, isShowDeleteBtn = false, onDelete, isComment = false, 
             <CardContent>
                 <div className={classes.cardHeader}>
                     <Typography variant="h3" className={classes.userfullname}>{data?.fullname}</Typography>
+                    {(!isComment && isUserLogined && isMyData) && <IconButton aria-label="favorite" onClick={() => navigate(`/edit/${data?.id}`)} className={classes.deleteBtn}>
+                        <EditIcon />
+                    </IconButton>}
                     {(isShowDeleteBtn && isUserLogined && isMyData) && <IconButton aria-label="favorite" onClick={deletePostBtn} className={classes.deleteBtn}>
                         <DeleteIcon />
                     </IconButton>}
@@ -79,7 +88,7 @@ PostCard.propTypes = {
 }
 
 const mapStateToProps = createStructuredSelector({
-    userData: selectUserData,
+    userData: selectInfoLoginUser,
 });
 
 export default connect(mapStateToProps)(PostCard);

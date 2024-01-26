@@ -46,7 +46,7 @@ const routes = [
   {
     path: '/edit/:postid',
     name: 'Edit Post',
-    protected: false,
+    protected: true,
     component: CreatePost,
     layout: MainLayout,
   },

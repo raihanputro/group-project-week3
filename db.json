@@ -11,6 +11,18 @@
       "fullname": "Raihan Putro Maulana Rizky",
       "email": "raihanworks461@gmail.com",
       "password": "RaihanPutro123"
+    },
+    {
+      "id": "2c74",
+      "fullname": "awdadwad",
+      "email": "aaa@a.a",
+      "password": "aaa123"
+    },
+    {
+      "id": "9565",
+      "fullname": "test user",
+      "email": "test@mail.com",
+      "password": "aaa123"
     }
   ],
   "post": [
@@ -38,6 +50,22 @@
     },
     {
       "id": "1d37"
+    },
+    {
+      "id": "8436",
+      "user_id": "2c74",
+      "fullname": "awdadwad",
+      "content": "<p>mau post ni</p>",
+      "pure_text": "mau post ni",
+      "created_date": "2024-01-26 07:46:27"
+    },
+    {
+      "id": "307c",
+      "user_id": "9565",
+      "fullname": "test user",
+      "content": "<p>bikin baru</p><p><br></p><h1>ini di edit yaaa</h1><p><br></p><p><strong>adwadwdadawdwa</strong>dawda<em>wdaw</em>dw<u>aw</u><strong><u>aw</u></strong></p>",
+      "pure_text": "bikin baru\n\nini di edit yaaa\n\nadwadwdadawdwadawdawdawdwawaw",
+      "created_date": "2024-01-26 07:59:09"
     }
   ],
   "comment": [
@@ -54,6 +82,22 @@
       "fullname": "ini org komen",
       "content": "dwadwadwa",
       "created_date": "2024-01-26 05:46:05"
+    },
+    {
+      "id": "d1bb",
+      "post_id": "8436",
+      "user_id": "2c74",
+      "fullname": "awdadwad",
+      "content": "mau komen",
+      "created_date": "2024-01-26 07:55:15"
+    },
+    {
+      "id": "69b8",
+      "post_id": "307c",
+      "user_id": "9565",
+      "fullname": "test user",
+      "content": "komen aja",
+      "created_date": "2024-01-26 07:58:47"
     }
   ]
 }
