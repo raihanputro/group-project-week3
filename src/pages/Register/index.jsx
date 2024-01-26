@@ -17,7 +17,7 @@ const Register = () => {
     const [password, setPassword] = useState('');
 
     const onSubmit = () => {
-        dispatch(setRegisterUser({ fullname: fullname, email: email, password: password }));
+        dispatch(setRegisterUser({ fullname: fullname, email: email, password: password })),
         navigate('/login')
     }
 

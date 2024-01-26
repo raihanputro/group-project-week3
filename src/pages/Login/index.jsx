@@ -7,27 +7,26 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import { Button, Box, Card, CardContent, Typography, TextField, FormControl, FormLabel } from '@mui/material';
 
 import { selectUserLogin } from './selectors';
-import { getUserLogin, setInfoLoginUser } from './actions';
+import { getUserDataLogin, setInfoLoginUser } from './actions';
 import { showPopup } from '@containers/App/actions';
 
 import classes from './style.module.scss';
-
 
 const Login = ({ dataUser }) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const intl = useIntl();
 
-    const [dataUser1, setDataUser] = useState([]);
+    const [user, setUser] = useState([]);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     useEffect(() => {
-      dispatch(getUserLogin());
+      dispatch(getUserDataLogin());
     }, [dispatch])
 
     useEffect(() => {
-      setDataUser(dataUser);
+      setUser(dataUser);
     }, [dataUser]);
 
     const onSubmit = (e) => {
@@ -41,7 +40,7 @@ const Login = ({ dataUser }) => {
           dispatch(showPopup(intl.formatMessage({ id: 'login_validation'}), intl.formatMessage({ id: 'login_validation_password_required'})));
         }
 
-        const matchingAccount = dataUser1.filter(item => item.email === email);
+        const matchingAccount = user.filter(item => item.email === email);
         console.log(matchingAccount[0], 'matching account');
 
         if(matchingAccount.length === 0) {
