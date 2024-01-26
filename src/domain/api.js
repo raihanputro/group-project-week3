@@ -32,7 +32,7 @@ export const callAPI = async (endpoint, method, header = {}, params = {}, data =
 };
 
 export const ping = () => callAPI(urls.ping, 'get');
-export const getAllPost = () => callAPI(urls.getAllPost, 'get');
+export const getAllPost = () => callAPI(urls.getAllPost, 'get', {}, { _sort: 'created_date' });
 
 export const RegisterUser = (datauser) => callAPI(urls.user, 'POST', {}, {}, datauser);
 
