@@ -58,8 +58,8 @@ const Navbar = ({ title, locale, theme, login }) => {
 
   const sideNavbar = (
     <Box sx={{ marginRight: '0.5rem'  }} className={classes.buttonContainer}>
-      <Button variant="outlined" className={classes.buttonRegister} onClick={() => navigate('/register')}>Register</Button>
-      <Button variant="outlined" className={classes.buttonLogin} onClick={() => navigate('/login')}>Login</Button>
+      <Button variant="outlined" className={classes.buttonRegister} onClick={() => navigate('/register')}><FormattedMessage id="app_register_title" /></Button>
+      <Button variant="outlined" className={classes.buttonLogin} onClick={() => navigate('/login')}><FormattedMessage id="app_login_title" /></Button>
     </Box>
   );
 
