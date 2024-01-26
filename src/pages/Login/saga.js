@@ -20,9 +20,7 @@ function* doGetDataUser({ dataUser }) {
 function* doLogin() {
     yield put(setLoading(true));
         try {
-            yield put(setLogin({
-                login: true,
-            }))
+            yield put(setLogin(true))
         } catch (error) {
             yield put(showPopup());
         }

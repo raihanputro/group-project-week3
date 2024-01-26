@@ -140,7 +140,7 @@ Navbar.propTypes = {
   title: PropTypes.string,
   locale: PropTypes.string.isRequired,
   theme: PropTypes.string,
-  login: PropTypes.object
+  login: PropTypes.bool
 };
 
 const mapStateToProps = createStructuredSelector({

@@ -10,9 +10,9 @@ import { selectInfoLoginUser } from '@pages/Login/selectors';
 const Home = ({ login }) => {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(ping());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(ping());
+  // }, [dispatch]);
 
   console.log(login);
 

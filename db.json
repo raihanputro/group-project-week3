@@ -1,25 +1,31 @@
 {
-    "user" : [
-        {
-            "id": 1,
-            "fullname" : "",
-            "email" : "",
-            "password" : ""
-        }
-    ],
-    "post" : [
-        {
-            "id" : 1,
-            "user_id" : 1,
-            "content" : ""
-        }
-    ],
-    "comment" : [
-        {
-            "id" : 1,
-            "post_id" : 1,
-            "user_id" : 1,
-            "content" : ""
-        }
-    ]
+  "user": [
+    {
+      "id": "1",
+      "fullname": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "5b46",
+      "fullname": "Raihan Putro Maulana Rizky",
+      "email": "raihanworks461@gmail.com",
+      "password": "RaihanPutro123"
+    }
+  ],
+  "post": [
+    {
+      "id": "1",
+      "user_id": 1,
+      "content": ""
+    }
+  ],
+  "comment": [
+    {
+      "id": "1",
+      "post_id": 1,
+      "user_id": 1,
+      "content": ""
+    }
+  ]
 }
