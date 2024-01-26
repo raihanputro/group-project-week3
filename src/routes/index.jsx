@@ -1,4 +1,6 @@
 import MainLayout from '@layouts/MainLayout';
+import CreatePost from '@pages/CreatePost';
+import DetailPost from '@pages/DetailPost';
 
 import Home from '@pages/Home';
 import Register from '@pages/Register';
@@ -27,7 +29,21 @@ const routes = [
     component: Login,
     layout: MainLayout,
   },
-  { path: '*', name: 'Not Found', component: NotFound, layout: MainLayout, protected: false },
+  {
+    path: '/createnew',
+    name: 'Home',
+    protected: true,
+    component: CreatePost,
+    layout: MainLayout,
+  },
+  {
+    path: '/:postid',
+    name: 'Post Detail',
+    protected: false,
+    component: DetailPost,
+    layout: MainLayout,
+  },
+  { path: '/notfound', name: 'Not Found', component: NotFound, layout: MainLayout, protected: false },
 ];
 
 export default routes;

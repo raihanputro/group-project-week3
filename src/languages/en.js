@@ -25,4 +25,17 @@ export default {
   login_validation_password_required: "Please enter your password!",
   login_validation_account_no_account: "Account not registered, please register!",
   login_validation_password_not_match: "Your password not correct!",
+  app_date_locale: "en-GB",
+  app_empty: "Empty...",
+
+  createnew_title: "Create New Post",
+  createnew_error_posting: "Content must be more than 10 characters!",
+  createnew_success_posting: "Content has been posted.",
+  createnew_button_send: "Send",
+  createnew_list_title: "Your Posts",
+
+  detail_post_title: "Post Detail",
+  detail_post_commnet_field: "Your comment here...",
+  detail_post_comment_button: "Send",
+  detail_post_empty: "Empty...",
 };

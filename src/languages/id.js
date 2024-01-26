@@ -25,4 +25,17 @@ export default {
   login_validation_password_required: "Masukkan Password!",
   login_validation_account_no_account: "Akun tidak terdaftar, silahkan daftar!",
   login_validation_password_not_match: "Kata sandi salah!",
+  app_date_locale: "id-ID",
+  app_empty: "Kosong...",
+
+  createnew_title: "Buat Post Baru",
+  createnew_error_posting: "Konten harus lebih dari 10 karakter!",
+  createnew_success_posting: "Kontent sudah dikirim.",
+  createnew_button_send: "Kirim",
+  createnew_list_title: "Post Kamu",
+
+  detail_post_title: "Post Detail",
+  detail_post_commnet_field: "Komen Anda di sini...",
+  detail_post_comment_button: "Kirim",
+  detail_post_empty: "Kosong...",
 };
