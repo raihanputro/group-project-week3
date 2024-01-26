@@ -71,12 +71,6 @@ function CreatePost({ userData, postData }) {
 
     useEffect(() => {
         if (postData) {
-            // const temp = postData.sort(function (a, b) {
-            //     return new Date(b.date) - new Date(a.date);
-            // });;
-            // // temp.sort(function (a, b) {
-            // //     return new Date(b.date) - new Date(a.date);
-            // // });
             setPostDataInternal(postData);
         }
     }, [postData]);

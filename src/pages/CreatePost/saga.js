@@ -22,6 +22,7 @@ function* getMyPost({userId}) {
 
   try {
     const res = yield call(getMyPostApi, userId);
+    res.sort((a, b) => (new Date(b.created_date) - new Date(a.created_date)));
     yield put(setUserPost(res));
   } catch (error) {
     yield put(showPopup());

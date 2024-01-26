@@ -57,11 +57,7 @@ function DetailPost({ postDataSelect, commentsSelect, isLogined, userData }) {
     }, [postid]);
     useEffect(() => {
         setPostData(postDataSelect);
-        const temp = commentsSelect;
-        temp.sort(function (a, b) {
-            return new Date(b.date) - new Date(a.date);
-        });
-        setPostComments(temp);
+        setPostComments(commentsSelect);
 
     }, [postDataSelect, commentsSelect])
 
