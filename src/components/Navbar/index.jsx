@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import { connect, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
-import { Avatar, Menu, MenuItem, Box, Button, Tooltip, IconButton, Typography } from '@mui/material';
+import { Avatar, Menu, MenuItem, Box, Button, Tooltip, IconButton, Typography } from '@mui/material';   
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import NightsStayIcon from '@mui/icons-material/NightsStay';
@@ -12,6 +12,7 @@ import NightsStayIcon from '@mui/icons-material/NightsStay';
 import { setLocale, setTheme } from '@containers/App/actions';
 import { selectLogin } from '@containers/Client/selectors';
 import { setLogin } from '@containers/Client/actions';
+import { setInfoLoginUser } from '@containers/Client/actions';
 
 import classes from './style.module.scss';
 
@@ -88,7 +89,7 @@ const Navbar = ({ title, locale, theme, login }) => {
           <MenuItem onClick={() => {handleCloseUserMenu, navigate('/profile')}}>
             <Typography textAlign="center">Profile</Typography>
           </MenuItem>
-          <MenuItem onClick={() => { handleCloseUserMenu, dispatch(setLogin(false))  }}>
+          <MenuItem onClick={() => { handleCloseUserMenu, dispatch(setLogin(false)), dispatch(setInfoLoginUser(null))  }}>
             <Typography textAlign="center">Logout</Typography>
           </MenuItem>
       </Menu>

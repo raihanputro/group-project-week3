@@ -5,7 +5,7 @@ import { createStructuredSelector } from 'reselect';
 import { FormattedMessage } from 'react-intl';
 
 import { ping } from '@containers/App/actions';
-import { selectInfoLoginUser } from '@pages/Login/selectors';
+import { selectInfoLoginUser } from '@containers/Client/selectors';
 
 const Home = ({ login }) => {
   const dispatch = useDispatch();
