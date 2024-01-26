@@ -5,6 +5,11 @@
         @include directionY;
         width: 100%;
 
+        .title {
+            color: var(--color-text);
+            width: 100%
+        }
+
         .inputForm {
             width: 100%;
             background-color: var(--color-quill);
@@ -21,10 +26,12 @@
     }
     .containerDataList {
         .title {
-
+            color: var(--color-text);
+            width: 100%
         }
         .listContainer {
             @include grid(1, 0.5rem);
+            margin-bottom: 30px;
         }
     }
 }

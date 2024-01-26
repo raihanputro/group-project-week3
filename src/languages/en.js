@@ -37,6 +37,7 @@ export default {
   register_validation_password_min: "Minimum password is 6 characters",
 
   createnew_title: "Create New Post",
+  createnew_title_edit: "Edit Post",
   createnew_error_posting: "Content must be more than 10 characters!",
   createnew_success_posting: "Content has been posted.",
   createnew_button_send: "Send",
