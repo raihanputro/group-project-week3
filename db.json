@@ -47,6 +47,12 @@
       "fullname": "sdfsfsdfs",
       "email": "dsfds",
       "password": "sdfdsfsfsfs"
+    },
+    {
+      "id": "860c",
+      "fullname": "faras test",
+      "email": "farastest@gmail.com",
+      "password": "123456"
     }
   ],
   "post": [
@@ -67,15 +73,6 @@
       "created_date": "2024-01-26 03:03:46"
     },
     {
-      "id": "b3d4"
-    },
-    {
-      "id": "6f4a"
-    },
-    {
-      "id": "1d37"
-    },
-    {
       "id": "8436",
       "user_id": "2c74",
       "fullname": "awdadwad",
@@ -90,6 +87,14 @@
       "content": "<p>bikin baru</p><p><br></p><h1>ini di edit yaaa</h1><p><br></p><p><strong>adwadwdadawdwa</strong>dawda<em>wdaw</em>dw<u>aw</u><strong><u>aw</u></strong></p>",
       "pure_text": "bikin baru\n\nini di edit yaaa\n\nadwadwdadawdwadawdawdawdwawaw",
       "created_date": "2024-01-26 07:59:09"
+    },
+    {
+      "id": "fb4c",
+      "user_id": "860c",
+      "fullname": "faras test",
+      "content": "<p>test</p><p><br></p><p><br></p><p><br></p><p>tesets</p><p><br></p><p><br></p><p>estset</p>",
+      "pure_text": "test\n\n\n\ntesets\n\n\nestset",
+      "created_date": "2024-01-26 08:55:19"
     }
   ],
   "comment": [
