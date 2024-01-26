@@ -28,8 +28,8 @@ function DetailPost({ postDataSelect, commentsSelect, isLogined, userData }) {
     const [comment, setComment] = useState("");
 
     function sendComment() {
-        if(comment.length < 5) {
-            dispatch(showPopup(intl.formatMessage({id: "detail_post_title"}), intl.formatMessage({id: "detail_post_comment_error"})));
+        if (comment.length < 5) {
+            dispatch(showPopup(intl.formatMessage({ id: "detail_post_title" }), intl.formatMessage({ id: "detail_post_comment_error" })));
             return;
         }
         const dateNow = new Date().toISOString().slice(0, 19).replace("T", " ");
@@ -50,14 +50,18 @@ function DetailPost({ postDataSelect, commentsSelect, isLogined, userData }) {
         if (postid) {
             dispatch(getPostDetailData(postid, () => {
                 navigate("/notfound");
-            }, () => {}));
+            }, () => { }));
         } else {
             navigate("/");
         }
     }, [postid]);
     useEffect(() => {
         setPostData(postDataSelect);
-        setPostComments(commentsSelect);
+        const temp = commentsSelect;
+        temp.sort(function (a, b) {
+            return new Date(b.date) - new Date(a.date);
+        });
+        setPostComments(temp);
 
     }, [postDataSelect, commentsSelect])
 
