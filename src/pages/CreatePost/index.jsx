@@ -50,7 +50,7 @@ function CreatePost({ userData, postData }) {
 
         const dateNow = new Date().toISOString().slice(0, 19).replace("T", " ");
 
-        if(postid) {
+        if (postid) {
             dispatch(editPostData(postid, { user_id: userData?.id, fullname: userData?.fullname, content: content, pure_text: pureText, created_date: dateNow }, () => {
                 navigate(`/${postid}`);
             }))
@@ -71,6 +71,12 @@ function CreatePost({ userData, postData }) {
 
     useEffect(() => {
         if (postData) {
+            // const temp = postData.sort(function (a, b) {
+            //     return new Date(b.date) - new Date(a.date);
+            // });;
+            // // temp.sort(function (a, b) {
+            // //     return new Date(b.date) - new Date(a.date);
+            // // });
             setPostDataInternal(postData);
         }
     }, [postData]);
@@ -80,7 +86,7 @@ function CreatePost({ userData, postData }) {
     useEffect(() => {
         setContent("");
         setPureText("");
-        
+
         if (postid) {
             dispatch(getPostDetailData(postid, () => {
                 navigate("/notfound");
