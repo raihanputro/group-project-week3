@@ -1,25 +1,35 @@
 {
-    "user" : [
-        {
-            "id": 1,
-            "fullname" : "",
-            "email" : "",
-            "password" : ""
-        }
-    ],
-    "post" : [
-        {
-            "id" : 1,
-            "user_id" : 1,
-            "content" : ""
-        }
-    ],
-    "comment" : [
-        {
-            "id" : 1,
-            "post_id" : 1,
-            "user_id" : 1,
-            "content" : ""
-        }
-    ]
+  "user": [
+    {
+      "id": 1,
+      "fullname": "",
+      "email": "",
+      "password": ""
+    }
+  ],
+  "post": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "content": "asbsbs"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "content": "asbasda"
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "content": "asbasda"
+    }
+  ],
+  "comment": [
+    {
+      "id": 1,
+      "post_id": 1,
+      "user_id": 1,
+      "content": ""
+    }
+  ]
 }

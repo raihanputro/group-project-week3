@@ -1,1 +1,42 @@
 @import '@styles/base';
+
+.container {
+  .createSection {
+    background-color: $color-white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    .intro {
+      font-size: 15px;
+      font-weight: 500;
+      color: $color-gray;
+    }
+
+    .button {
+      padding: 10px 30px;
+      background-color: $color-dark-blue;
+      color: $color-white;
+      border-radius: 25px;
+      font-size: 16px;
+    }
+  }
+
+  .postSection {
+    border: 1px solid #000;
+    background-color: $color-white;
+    padding: 10px;
+    font-size: 16px;
+
+    .name {
+      font-size: 15px;
+      font-weight: 700;
+      color: $color-dark-blue;
+
+      span {
+        color: $color-gray;
+        font-weight: 500;
+      }
+    }
+  }
+}

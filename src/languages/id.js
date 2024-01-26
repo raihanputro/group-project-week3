@@ -1,5 +1,6 @@
 export default {
   app_greeting: 'Hai dari Web!',
+  app_home: 'Beranda',
   app_title_header: 'My Moments',
   app_not_found: 'Halaman tidak ditemukan',
   app_lang_id: 'Bahasa Indonesia',
