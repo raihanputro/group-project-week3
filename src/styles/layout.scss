@@ -1,3 +1,5 @@
+@import "./media-mixins.scss";
+
 @mixin directionY {
   display: flex;
   flex-direction: column;
@@ -6,4 +8,48 @@
 @mixin directionX {
   display: flex;
   flex-direction: row;
+}
+
+@mixin padding($value) {
+  box-sizing: border-box;
+  padding: $value;
+}
+
+@mixin padding-x($value) {
+  box-sizing: border-box;
+  padding-left: $value;
+  padding-right: $value;
+}
+
+@mixin padding-y($value) {
+  box-sizing: border-box;
+  padding-top: $value;
+  padding-bottom: $value;
+}
+
+@mixin margin-x($value) {
+  margin-left: $value;
+  margin-right: $value;
+}
+
+@mixin margin-y($value) {
+  margin-top: $value;
+  margin-bottom: $value;
+}
+
+@mixin main-container {
+  .mainContainer {
+    @include padding-x(2rem);
+    @include directionY;
+    padding-top: 2rem;
+    width: 100%;
+
+    @content;
+  }
+}
+
+@mixin grid($col, $gap) {
+  display: grid;
+  grid-template-columns: repeat($col, minmax(0, 1fr));
+  gap: $gap;
 }

@@ -1,0 +1,34 @@
+@import "../../styles/base.scss";
+
+.cardContainer {
+    width: 100%;
+
+    .cardHeader {
+        @include directionX;
+        align-items: center;
+
+        .userfullname {
+            width: 100%;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-text);
+        }
+    }
+    .cardBody {
+
+        .content {
+            width: 100%;
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: var(--color-text);
+        }
+        .date {
+            width: 100%;
+            text-align: end;
+            color: var(--color-text-darker);
+        }
+    }
+    .cardPounter {
+        cursor: pointer;
+    }
+}

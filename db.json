@@ -1,0 +1,148 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "fullname": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "5b46",
+      "fullname": "Raihan Putro Maulana Rizky",
+      "email": "raihanworks461@gmail.com",
+      "password": "RaihanPutro123"
+    },
+    {
+      "id": "badb",
+      "fullname": "test1",
+      "email": "test1@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "1c5b",
+      "fullname": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "715b",
+      "fullname": "test 2",
+      "email": "test2@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "b0cd",
+      "fullname": "dddd",
+      "email": "ddd",
+      "password": "3"
+    },
+    {
+      "id": "0a9e",
+      "fullname": "rehan123456",
+      "email": "sggrrgr",
+      "password": "1221e1fwfwfw"
+    },
+    {
+      "id": "bb74",
+      "fullname": "sdfsfsdfs",
+      "email": "dsfds",
+      "password": "sdfdsfsfsfs"
+    },
+    {
+      "id": "860c",
+      "fullname": "faras test",
+      "email": "farastest@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "post": [
+    {
+      "id": "0540",
+      "user_id": 1,
+      "fullname": "Ini orang aja",
+      "content": "<p>wdadwadwadw</p><p><br></p><h1>ini data</h1>",
+      "pure_text": "wdadwadwadw\n\nini data",
+      "created_date": "2024-01-26 07:32:27"
+    },
+    {
+      "id": "a775",
+      "user_id": 1,
+      "fullname": "Ini orang aja",
+      "content": "<p>dwadwadwawda</p>",
+      "pure_text": "dwadwadwawda",
+      "created_date": "2024-01-26 03:03:46"
+    },
+    {
+      "id": "8436",
+      "user_id": "2c74",
+      "fullname": "awdadwad",
+      "content": "<p>mau post ni</p>",
+      "pure_text": "mau post ni",
+      "created_date": "2024-01-26 07:46:27"
+    },
+    {
+      "id": "307c",
+      "user_id": "9565",
+      "fullname": "test user",
+      "content": "<p>bikin baru</p><p><br></p><h1>ini di edit yaaa</h1><p><br></p><p><strong>adwadwdadawdwa</strong>dawda<em>wdaw</em>dw<u>aw</u><strong><u>aw</u></strong></p>",
+      "pure_text": "bikin baru\n\nini di edit yaaa\n\nadwadwdadawdwadawdawdawdwawaw",
+      "created_date": "2024-01-26 07:59:09"
+    },
+    {
+      "id": "f773",
+      "user_id": "badb",
+      "fullname": "test1",
+      "content": "<p>dasdasdwad</p><h1>dwadadwad</h1>",
+      "pure_text": "dasdasdwad\ndwadadwad",
+      "created_date": "2024-01-26 08:31:06"
+    },
+    {
+      "id": "13fc",
+      "user_id": "860c",
+      "fullname": "faras test",
+      "content": "<p>dwadadwadwa</p>",
+      "pure_text": "dwadadwadwa",
+      "created_date": "2024-01-26 09:31:10"
+    },
+    {
+      "id": "7788",
+      "user_id": "badb",
+      "fullname": "test1",
+      "content": "<p>xXaXaxaadwdwadwadawdaw</p>",
+      "pure_text": "xXaXaxaadwdwadwadawdaw",
+      "created_date": "2024-01-26 09:10:16"
+    }
+  ],
+  "comment": [
+    {
+      "id": 1,
+      "post_id": 1,
+      "user_id": 1,
+      "content": ""
+    },
+    {
+      "id": "accc",
+      "post_id": "0540",
+      "user_id": 1,
+      "fullname": "ini org komen",
+      "content": "dwadwadwa",
+      "created_date": "2024-01-26 05:46:05"
+    },
+    {
+      "id": "d1bb",
+      "post_id": "8436",
+      "user_id": "2c74",
+      "fullname": "awdadwad",
+      "content": "mau komen",
+      "created_date": "2024-01-26 07:55:15"
+    },
+    {
+      "id": "7445",
+      "post_id": "307c",
+      "user_id": "9565",
+      "fullname": "test user",
+      "content": "mau komenwwwwww",
+      "created_date": "2024-01-26 08:10:36"
+    }
+  ]
+}
