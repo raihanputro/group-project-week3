@@ -86,8 +86,11 @@ const Navbar = ({ title, locale, theme, login }) => {
         open={Boolean(anchorElUser)}
         onClose={handleCloseUserMenu}
       >
-          <MenuItem onClick={() => {handleCloseUserMenu, navigate('/profile')}}>
+        <MenuItem onClick={() => {handleCloseUserMenu, navigate('/profile')}}>
             <Typography textAlign="center">Profile</Typography>
+          </MenuItem>
+          <MenuItem onClick={() => {handleCloseUserMenu, navigate('/createnew')}}>
+            <Typography textAlign="center">Create Post</Typography>
           </MenuItem>
           <MenuItem onClick={() => { handleCloseUserMenu, dispatch(setLogin(false)), dispatch(setInfoLoginUser(null))  }}>
             <Typography textAlign="center">Logout</Typography>
