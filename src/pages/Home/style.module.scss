@@ -1,8 +1,13 @@
 @import '@styles/base';
 
 .container {
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
   .createSection {
-    background-color: $color-white;
+    background-color: var(--color-bg);
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -10,15 +15,16 @@
     .intro {
       font-size: 15px;
       font-weight: 500;
-      color: $color-gray;
+      color: var(--color-text);
     }
 
     .button {
       padding: 10px 30px;
-      background-color: $color-dark-blue;
-      color: $color-white;
+      background-color: var(--color-button);
+      color: var(--color-text);
       border-radius: 25px;
       font-size: 16px;
+      cursor: pointer;
     }
   }
 

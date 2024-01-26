@@ -1,2 +1,2 @@
-export const SET_POST = 'SET_POST';
-export const GET_POST = 'GET_POST';
+export const SET_HOME_POST = 'SET_HOME_POST';
+export const GET_HOME_POST = 'GET_HOME_POST';

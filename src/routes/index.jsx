@@ -6,6 +6,7 @@ import Home from '@pages/Home';
 import Register from '@pages/Register';
 import Login from '@pages/Login';
 import NotFound from '@pages/NotFound';
+import Profile from '@pages/Profile';
 
 const routes = [
   {
@@ -41,6 +42,13 @@ const routes = [
     name: 'Post Detail',
     protected: false,
     component: DetailPost,
+    layout: MainLayout,
+  },
+  {
+    path: '/profile',
+    name: 'Profile',
+    protected: true,
+    component: Profile,
     layout: MainLayout,
   },
   { path: '/notfound', name: 'Not Found', component: NotFound, layout: MainLayout, protected: false },

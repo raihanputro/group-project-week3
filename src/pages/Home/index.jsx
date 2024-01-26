@@ -1,51 +1,53 @@
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { connect, useDispatch } from 'react-redux';
-import { Avatar, Box, Grid } from '@mui/material';
+import { Box } from '@mui/material';
+import PostCard from '@components/PostCard';
 import { createStructuredSelector } from 'reselect';
 import { selectLogin } from '@containers/Client/selectors';
 import { FormattedMessage } from 'react-intl';
+import { useNavigate } from 'react-router-dom';
 import classes from './style.module.scss';
-import { getPost } from './actions';
+import { getHomePost } from './actions';
 import { selectPost } from './selectors';
 
 const Home = ({ login, posts }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    dispatch(getPost());
+    dispatch(getHomePost());
   }, [dispatch]);
 
   return (
     <Box className={classes.container} padding={{ xs: '10px 15vw', sm: '10px 20vw', md: '10px 25vw' }}>
-      <FormattedMessage id="app_home" />
-      <Box className={classes.createSection}>
-        <div>
-          <p className={classes.intro}>Whats Happening?</p>
-          <button type="button" className={classes.button}>
-            Share Moment
-          </button>
-        </div>
-      </Box>
-      <div className={classes.postSection}>
-        <div className={classes.infoSection}>
-          <Grid container spacing={3}>
-            <Grid item xs="auto">
-              <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-            </Grid>
-            <Grid item xs={9}>
-              <div className={classes.infoPost}>
-                <Box className={classes.name}>
-                  Farras Arkan <span> • 1 Januari 2023</span>
-                </Box>
-                <div className={classes.contentSection}>
-                  <p>ini content 1</p>
-                </div>
-              </div>
-            </Grid>
-          </Grid>
-        </div>
-      </div>
+      <p className={classes.title}>
+        <FormattedMessage id="app_home" />
+      </p>
+      {login && (
+        <Box className={classes.createSection}>
+          <div>
+            <p className={classes.intro}>
+              <FormattedMessage id="home_what_happen" />
+            </p>
+            <button
+              type="button"
+              className={classes.button}
+              onClick={() => {
+                navigate('/createnew');
+              }}
+            >
+              <FormattedMessage id="home_share_button" />
+            </button>
+          </div>
+        </Box>
+      )}
+
+      {posts.map((post, index) => (
+        <Box paddingBottom={2} key={index}>
+          <PostCard data={post} />
+        </Box>
+      ))}
     </Box>
   );
 };

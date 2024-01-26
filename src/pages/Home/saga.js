@@ -1,13 +1,14 @@
 import { takeLatest, call, put } from 'redux-saga/effects';
 import { setLoading } from '@containers/App/actions';
 import { getAllPost } from '@domain/api';
-import { GET_POST } from './constants';
+import { GET_HOME_POST } from './constants';
+import { setHomePost } from './actions';
 
 function* doGetPost() {
   yield put(setLoading(true));
   try {
-    const { data } = yield call(getAllPost);
-    console.log(data);
+    const response = yield call(getAllPost);
+    yield put(setHomePost(response));
   } catch (error) {
     console.log(error);
   }
@@ -15,5 +16,5 @@ function* doGetPost() {
 }
 
 export default function* homeSaga() {
-  yield takeLatest(GET_POST, doGetPost);
+  yield takeLatest(GET_HOME_POST, doGetPost);
 }

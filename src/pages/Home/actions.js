@@ -1,10 +1,10 @@
-import { GET_POST, SET_POST } from './constants';
+import { GET_HOME_POST, SET_HOME_POST } from './constants';
 
-export const setPost = (posts) => ({
-  type: SET_POST,
+export const setHomePost = (posts) => ({
+  type: SET_HOME_POST,
   posts,
 });
 
-export const getPost = () => ({
-  type: GET_POST,
+export const getHomePost = () => ({
+  type: GET_HOME_POST,
 });
