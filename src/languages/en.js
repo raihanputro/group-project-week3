@@ -51,4 +51,5 @@ export default {
 
   home_what_happen: 'Whats Happening?',
   home_share_button: 'Share Moment',
+  detail_post_comment_error: "Comment must be more than 5 characters!",
 };

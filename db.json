@@ -89,12 +89,12 @@
       "created_date": "2024-01-26 07:59:09"
     },
     {
-      "id": "fb4c",
-      "user_id": "860c",
-      "fullname": "faras test",
-      "content": "<p>test</p><p><br></p><p><br></p><p><br></p><p>tesets</p><p><br></p><p><br></p><p>estset</p>",
-      "pure_text": "test\n\n\n\ntesets\n\n\nestset",
-      "created_date": "2024-01-26 08:55:19"
+      "id": "f773",
+      "user_id": "badb",
+      "fullname": "test1",
+      "content": "<p>dasdasdwad</p><h1>dwadadwad</h1>",
+      "pure_text": "dasdasdwad\ndwadadwad",
+      "created_date": "2024-01-26 08:31:06"
     }
   ],
   "comment": [
@@ -121,12 +121,12 @@
       "created_date": "2024-01-26 07:55:15"
     },
     {
-      "id": "69b8",
+      "id": "7445",
       "post_id": "307c",
       "user_id": "9565",
       "fullname": "test user",
-      "content": "komen aja",
-      "created_date": "2024-01-26 07:58:47"
+      "content": "mau komenwwwwww",
+      "created_date": "2024-01-26 08:10:36"
     }
   ]
 }

@@ -1,3 +1,5 @@
+@import "./media-mixins.scss";
+
 @mixin directionY {
   display: flex;
   flex-direction: column;
