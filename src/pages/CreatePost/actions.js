@@ -1,4 +1,4 @@
-import { GET_USER_POSTS, INSERT_NEW_POST, SET_USER_POSTS } from "./constants";
+import { EDIT_POST_DATA, GET_USER_POSTS, INSERT_NEW_POST, SET_USER_POSTS } from "./constants";
 
 export const insertNewPost = (formData, cb) => ({
   type: INSERT_NEW_POST,
@@ -15,3 +15,10 @@ export const setUserPost = (data) => ({
   type: SET_USER_POSTS,
   data
 });
+
+export const editPostData = (id, data, cb) => ({
+  type: EDIT_POST_DATA,
+  id,
+  data,
+  cb
+})

@@ -29,6 +29,7 @@ export default {
   app_empty: "Kosong...",
 
   createnew_title: "Buat Post Baru",
+  createnew_title_edit: "Ubah Post",
   createnew_error_posting: "Konten harus lebih dari 10 karakter!",
   createnew_success_posting: "Kontent sudah dikirim.",
   createnew_button_send: "Kirim",
