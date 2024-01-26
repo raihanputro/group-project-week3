@@ -100,11 +100,10 @@ const Navbar = ({ title, locale, theme, login }) => {
     <div className={classes.headerWrapper} data-testid="navbar">
       <div className={classes.contentWrapper}>
         <div className={classes.logoImage} onClick={goHome}>
-          {/* <img src="/vite.svg" alt="logo" className={classes.logo} /> */}
           <div className={classes.title}>{title}</div>
         </div>
         <div className={classes.toolbar}>
-          { login ? sideNavbarLogin : sideNavbar}
+          { login ? sideNavbarLogin : sideNavbar }
           <div className={classes.theme} onClick={handleTheme} data-testid="toggleTheme">
             {theme === 'light' ? <NightsStayIcon /> : <LightModeIcon />}
           </div>
