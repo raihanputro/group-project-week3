@@ -29,6 +29,11 @@ const Login = ({ dataUser }) => {
       setUser(dataUser);
     }, [dataUser]);
 
+    function isValidEmail(email) {
+      const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return pattern.test(email);
+  }
+
     const onSubmit = (e) => {
         e.preventDefault();
 
@@ -36,12 +41,15 @@ const Login = ({ dataUser }) => {
           dispatch(showPopup(intl.formatMessage({ id: 'login_validation'}), intl.formatMessage({ id: 'login_validation_requied'})));
         } else if(email === "") {
           dispatch(showPopup(intl.formatMessage({ id: 'login_validation'}), intl.formatMessage({ id: 'login_validation_email_required'})));
+        } else if(!isValidEmail(email)) {
+          dispatch(showPopup(intl.formatMessage({ id: 'login_validation'}), intl.formatMessage({ id: 'register_validation_email_pattern'})));
         } else if(password === "") {
           dispatch(showPopup(intl.formatMessage({ id: 'login_validation'}), intl.formatMessage({ id: 'login_validation_password_required'})));
-        }
+        } else if(password.length < 6) {
+          dispatch(showPopup(intl.formatMessage({ id: 'login_validation'}), intl.formatMessage({ id: 'register_validation_password_min'})));
+      }
 
         const matchingAccount = user.filter(item => item.email === email);
-        console.log(matchingAccount[0], 'matching account');
 
         if(matchingAccount.length === 0) {
           dispatch(showPopup(intl.formatMessage({ id: 'login_validation'}), intl.formatMessage({ id: 'login_validation_account_no_account'})));
