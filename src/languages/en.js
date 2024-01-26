@@ -21,12 +21,20 @@ export default {
 
   login_validation: "Login Validation",
   login_validation_requied: "Please enter your email and password!",
-  login_validation_email_required: "Please enter your password!",
+  login_validation_email_required: "Please enter your email!",
   login_validation_password_required: "Please enter your password!",
   login_validation_account_no_account: "Account not registered, please register!",
   login_validation_password_not_match: "Your password not correct!",
   app_date_locale: "en-GB",
   app_empty: "Empty...",
+
+  register_validation: "Register Validation",
+  register_validation_requied: "Please enter your full name, email and password!",
+  register_validation_fullname_required: "Please enter your fullname!",
+  register_validation_email_required: "Please enter your email!",
+  register_validation_password_required: "Please enter your password!",
+  register_validation_email_pattern: "Email not valid!",
+  register_validation_password_min: "Minimum password is 6 characters",
 
   createnew_title: "Create New Post",
   createnew_title_edit: "Edit Post",

@@ -28,6 +28,14 @@ export default {
   app_date_locale: "id-ID",
   app_empty: "Kosong...",
 
+  register_validation: "Validasi Daftar",
+  register_validation_requied: "Masukkan Nama Lengkap, Email dan Password!",
+  register_validation_fullname_required: "Masukkan Nama Lengkap!",
+  register_validation_email_required: "Masukkan Email!",
+  register_validation_password_required: "Masukkan Password!",
+  register_validation_email_pattern: "Email tidak valid!",
+  register_validation_password_min: "Password minimal 6 karakter!",
+
   createnew_title: "Buat Post Baru",
   createnew_title_edit: "Ubah Post",
   createnew_error_posting: "Konten harus lebih dari 10 karakter!",

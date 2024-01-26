@@ -58,8 +58,8 @@ const Navbar = ({ title, locale, theme, login }) => {
 
   const sideNavbar = (
     <Box sx={{ marginRight: '0.5rem'  }} className={classes.buttonContainer}>
-      <Button variant="outlined" className={classes.buttonRegister} onClick={() => navigate('/register')}>Register</Button>
-      <Button variant="outlined" className={classes.buttonLogin} onClick={() => navigate('/login')}>Login</Button>
+      <Button variant="outlined" className={classes.buttonRegister} onClick={() => navigate('/register')}><FormattedMessage id="app_register_title" /></Button>
+      <Button variant="outlined" className={classes.buttonLogin} onClick={() => navigate('/login')}><FormattedMessage id="app_login_title" /></Button>
     </Box>
   );
 
@@ -86,8 +86,11 @@ const Navbar = ({ title, locale, theme, login }) => {
         open={Boolean(anchorElUser)}
         onClose={handleCloseUserMenu}
       >
-          <MenuItem onClick={() => {handleCloseUserMenu, navigate('/profile')}}>
+        <MenuItem onClick={() => {handleCloseUserMenu, navigate('/profile')}}>
             <Typography textAlign="center">Profile</Typography>
+          </MenuItem>
+          <MenuItem onClick={() => {handleCloseUserMenu, navigate('/createnew')}}>
+            <Typography textAlign="center">Create Post</Typography>
           </MenuItem>
           <MenuItem onClick={() => { handleCloseUserMenu, dispatch(setLogin(false)), dispatch(setInfoLoginUser(null))  }}>
             <Typography textAlign="center">Logout</Typography>
