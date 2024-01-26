@@ -51,4 +51,5 @@ export default {
 
   home_what_happen: 'Bagaimana hari ini?',
   home_share_button: 'Bagikan Momen',
+  detail_post_comment_error: "Komen harus lebih dari 5 karakter!",
 };

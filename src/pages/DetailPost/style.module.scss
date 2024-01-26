@@ -14,7 +14,7 @@
     .name {
       flex-grow: 1;
       margin: 0;
-      font-size: 18px;
+      font-size: 24px;
       font-weight: 500;
     }
     .date {
@@ -26,10 +26,13 @@
     }
   }
   .postContent {
+    @include padding(0.5rem);
     width: 100%;
     min-height: 400px;
     overflow-x: auto;
     margin-bottom: 20px;
+    background-color: var(--color-bg);
+    border-radius: 10px;
 
     h1, h2, h3, a, b, p {
         margin: 0;
