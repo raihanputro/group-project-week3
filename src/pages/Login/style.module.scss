@@ -2,8 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include apply-at-xs-size {
+        margin-top: 15%;
+    }
     @include apply-at-xs2-size {
-        margin-top:30%;
+        margin-top:20%;
     }
     @include apply-at-lg-size {
         margin-top: 20%;
@@ -11,6 +14,7 @@
     @include apply-at-xl-size  {
         margin-top: 5%;
     }
+    
     .cardContainer {
         width: 60%;
         background-color: var(--color-bg);
