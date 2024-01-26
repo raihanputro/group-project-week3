@@ -1,16 +1,16 @@
 {
   "user": [
     {
-      "id": 1,
+      "id": "1",
       "fullname": "",
       "email": "",
       "password": ""
     },
     {
-      "id": "8237",
-      "fullname": "si tong",
-      "email": "tes1@mail.com",
-      "password": "aaa123"
+      "id": "5b46",
+      "fullname": "Raihan Putro Maulana Rizky",
+      "email": "raihanworks461@gmail.com",
+      "password": "RaihanPutro123"
     }
   ],
   "post": [
