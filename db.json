@@ -15,14 +15,57 @@
   ],
   "post": [
     {
-      "id": "1",
+      "id": "9bcf",
       "user_id": 1,
-      "content": ""
+      "fullname": "Ini orang aja",
+      "content": "<p>sadwasdw adawd</p><p>aw d</p><p> aw</p><p>da</p><p>w</p><p>aw</p><p>daw</p><p>d</p><p>wa</p><p>daw</p>",
+      "pure_text": "sadwasdw adawd\naw d\n aw\nda\nw\naw\ndaw\nd\nwa\ndaw",
+      "created_date": "2024-01-25T09:59:47.010Z"
+    },
+    {
+      "id": "e706",
+      "user_id": 1,
+      "fullname": "Ini orang aja",
+      "content": "<p>awdwadawdwad</p>",
+      "pure_text": "awdwadawdwad",
+      "created_date": "2024-01-25T09:59:49.563Z"
+    },
+    {
+      "id": "dc4f",
+      "user_id": 1,
+      "fullname": "Ini orang aja",
+      "content": "<p>wdwadw ada wadaw daw dwa</p>",
+      "pure_text": "wdwadw ada wadaw daw dwa",
+      "created_date": "2024-01-25T09:59:52.367Z"
+    },
+    {
+      "id": "04e8",
+      "user_id": 1,
+      "fullname": "Ini orang aja",
+      "content": "<p>awd wadwad aw aw d</p>",
+      "pure_text": "awd wadwad aw aw d",
+      "created_date": "2024-01-25T09:59:54.487Z"
+    },
+    {
+      "id": "8149",
+      "user_id": 1,
+      "fullname": "Ini orang aja",
+      "content": "<p> d wad wad wad wa</p>",
+      "pure_text": " d wad wad wad wa",
+      "created_date": "2024-01-25T09:59:57.287Z"
+    },
+    {
+      "id": "9e23",
+      "user_id": 1,
+      "fullname": "Ini orang aja",
+      "content": "<p>w dwadawd wad aw</p>",
+      "pure_text": "w dwadawd wad aw",
+      "created_date": "2024-01-25T09:59:59.605Z"
     }
   ],
   "comment": [
     {
-      "id": "1",
+      "id": 1,
       "post_id": 1,
       "user_id": 1,
       "content": ""

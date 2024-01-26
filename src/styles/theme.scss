@@ -4,12 +4,16 @@
   --color-bg: #fff;
   --color-bg-secondary: #e8eef1;
   --color-text: #001a41;
+  --color-text-darker: #11499c;
   --color-button: #ed0226;
+  --color-quill: #fff;
 }
 
 @mixin dark-theme {
   --color-bg: #4f4557;
   --color-bg-secondary: #393646;
   --color-text: #f4eee0;
+  --color-text-darker: #afaba2;
   --color-button: #ed0226;
+  --color-quill: #aaaaaa;
 }
