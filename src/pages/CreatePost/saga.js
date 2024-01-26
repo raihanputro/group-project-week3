@@ -5,7 +5,7 @@ import { EDIT_POST_DATA, GET_USER_POSTS, INSERT_NEW_POST } from './constants';
 import { createNewPost, editPostDataApi, getMyPostApi } from '@domain/api';
 import { setUserPost } from './actions';
 
-function* doInsertPost({formData, cb}) {
+function* doInsertPost({ formData, cb }) {
   yield put(setLoading(true));
 
   try {
@@ -17,19 +17,21 @@ function* doInsertPost({formData, cb}) {
 
   yield put(setLoading(false));
 }
-function* getMyPost({userId}) {
+function* getMyPost({ userId }) {
   yield put(setLoading(true));
 
   try {
     const res = yield call(getMyPostApi, userId);
-    yield put(setUserPost(res));
+    const finalRes = res.sort((a, b) => new Date(b.created_date) - new Date(a.created_date));
+
+    yield put(setUserPost(finalRes));
   } catch (error) {
     yield put(showPopup());
   }
 
   yield put(setLoading(false));
 }
-function* editPost({id, data, cb}) {
+function* editPost({ id, data, cb }) {
   yield put(setLoading(true));
 
   try {

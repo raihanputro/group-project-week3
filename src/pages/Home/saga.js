@@ -8,7 +8,8 @@ function* doGetPost() {
   yield put(setLoading(true));
   try {
     const response = yield call(getAllPost);
-    yield put(setHomePost(response));
+    const finalRes = response.sort((a, b) => new Date(b.created_date) - new Date(a.created_date));
+    yield put(setHomePost(finalRes));
   } catch (error) {
     console.log(error);
   }
