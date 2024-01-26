@@ -1,8 +1,8 @@
 import { takeLatest, call, put } from "redux-saga/effects";
 
 import { LoginUser } from "@domain/api";
-import { GET_USER_LOGIN, SET_INFO_LOGIN_USER } from "./constants";
-import { setInfoLoginUser, setUserLogin } from "./actions";
+import { GET_USER_DATA_LOGIN, SET_INFO_LOGIN_USER } from "./constants";
+import { setUserDataLogin } from "./actions";
 import { setLoading, showPopup } from "@containers/App/actions";
 import { setLogin } from "@containers/Client/actions";
 
@@ -10,7 +10,7 @@ function* doGetDataUser({ dataUser }) {
     yield put(setLoading(true));
     try {
         const res = yield call(LoginUser, dataUser);
-        yield put(setUserLogin(res));
+        yield put(setUserDataLogin(res));
     } catch (error) {
         yield put(showPopup());
     }
@@ -29,6 +29,6 @@ function* doLogin() {
 }
 
 export default function* loginUserSaga() {
-    yield takeLatest(GET_USER_LOGIN, doGetDataUser);
+    yield takeLatest(GET_USER_DATA_LOGIN, doGetDataUser);
     yield takeLatest(SET_INFO_LOGIN_USER, doLogin);
 }
