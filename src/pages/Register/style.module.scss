@@ -2,23 +2,36 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5%;
+    @include apply-at-xs2-size {
+        margin-top:30%;
+    }
+    @include apply-at-lg-size {
+        margin-top: 20%;
+    }
+    @include apply-at-xl-size  {
+        margin-top: 5%;
+    }
 
     .cardContainer {
         width: 60%;
-        background-color: white;
-        color: black;
+        background-color: var(--color-bg);
+        color: var(--color-text);
         border-radius: 10px;
         max-width: 416px;
         max-height: 596px;
         box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        @include apply-at-xs2-size {
+            width: 80%;
+        }
 
         .pageTitle {
             font-size: 36px;
-            font-weight: 700;
+            font-weight: 900;
             line-height: 54px;
+            letter-spacing: 2px;
             text-align: center;
             margin-bottom: 30px;
+            color: var(--color-text);
         }
 
         .formContainer {
@@ -29,12 +42,14 @@
             .inputLabelContainer {
                 display: flex;
                 flex-direction: column;
+                gap: 5px;
                 
                 .label {
-                    color: black;
+                    color: var(--color-text);
                     font-size: 24px;
                     font-weight: 900;
                     line-height: 28.13px;
+                    letter-spacing: 2px;
                     font-style: normal;
                 }
 
@@ -42,7 +57,10 @@
                     background-color: rgba(210, 210, 210, 0.25);
                     border-radius: 5px;
                     border: 2px solid rgba(210, 210, 210, 0.25);
-                    color: #000;
+
+                    input {
+                        color: var(--color-text);
+                    }
                 }
             }
         }  
@@ -50,11 +68,11 @@
         .registerButton {
             margin-top: 7%;
             width: 100%;
-            color: white;
+            color: var(--color-text);
             font-weight: 700;
             font-size: 24px;
             line-height: normal;
-            background-color: #2E86DE;
+            background-color: var(--color-bg-secondary);
         }
     }
 }
